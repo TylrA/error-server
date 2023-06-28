@@ -1,15 +1,26 @@
+[tool.isort]
+profile = "black"
+
 [tool.poetry]
 name = "error-server"
 version = "0.1.0"
 description = "Flask application serving http error codes for testing purposes."
 authors = ["TylrA <tylerhaddams@gmail.com>"]
 readme = "README.md"
-packages = [{include = "error_server"}]
+#packages = [{include = "error_server"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
 Flask = "^2.3.2"
+nodeenv = "^1.8.0"
+logging = "^0.4.9.6"
 
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.3.0"
+
+[tool.poetry.scripts]
+format = "black ."
 
 [build-system]
 requires = ["poetry-core"]
