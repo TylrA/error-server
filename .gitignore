@@ -1,3 +1,5 @@
 *~
 .dir-locals.el
+
 poetry.lock
+__pycache__
