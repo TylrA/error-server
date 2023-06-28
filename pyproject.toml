@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "error-server"
+version = "0.1.0"
+description = "Flask application serving http error codes for testing purposes."
+authors = ["TylrA <tylerhaddams@gmail.com>"]
+readme = "README.md"
+packages = [{include = "error_server"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+Flask = "^2.3.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
