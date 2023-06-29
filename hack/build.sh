@@ -11,7 +11,9 @@ PROJ_DIR="$(git rev-parse --show-toplevel)"
 
 TAG="${REPOSITORY}:${VERSION}"
 
-if [[ ! $DOCKER_BIN build --platform linux/amd64 -t "$TAG" $PROJ_DIR ]]; then
+$DOCKER_BIN build --platform linux/amd64 -t "$TAG" $PROJ_DIR
+if [[ ! $? ]]; then
+    echo error: build failed
     exit 1
 fi
 
